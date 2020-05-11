@@ -1,0 +1,17 @@
+.idea
+heroku-addressbook.sh
+heroku-numbers.sh
+heroku-tweets.sh
+heroku-encoder.sh
+build.sh
+build-fullstack.sh
+*.imp
+*.ipr
+*.iws
+/.idea/
+
+.*/
+build/
+out/
+/refresh.sh
+*.idea
