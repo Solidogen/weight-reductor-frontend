@@ -224,5 +224,17 @@ afterEvaluate {
             inputs.files(distribution, webDir)
             outputs.file(archiveFile)
         }
+
+        /*
+        * Deployment tasks
+        * */
+        create("deployNetlifyTest", Exec::class) {
+            dependsOn("browserProductionWebpack")
+            commandLine = "netlify deploy".split(" ")
+        }
+        create("deployNetlify", Exec::class) {
+            dependsOn("browserProductionWebpack")
+            commandLine = "netlify deploy --prod".split(" ")
+        }
     }
 }
