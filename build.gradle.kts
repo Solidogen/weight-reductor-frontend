@@ -226,6 +226,13 @@ afterEvaluate {
         }
 
         /*
+        * Run with live reload
+        * */
+        create("runLive", Exec::class) {
+            commandLine = "./gradlew run -t".split(" ")
+        }
+
+        /*
         * Deployment tasks
         * */
         create("deployNetlifyTest", Exec::class) {
