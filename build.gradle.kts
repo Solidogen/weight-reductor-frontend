@@ -36,6 +36,7 @@ repositories {
 // Versions
 val kotlinVersion: String by System.getProperties()
 val kvisionVersion: String by System.getProperties()
+val coroutinesVersion: String by project
 
 // Custom Properties
 val webDir = file("src/main/web")
@@ -77,6 +78,8 @@ kotlin {
         implementation(npm("po2json"))
         implementation(npm("grunt"))
         implementation(npm("grunt-pot"))
+
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:$coroutinesVersion")
 
         implementation("pl.treksoft:kvision:$kvisionVersion")
         implementation("pl.treksoft:kvision-bootstrap:$kvisionVersion")
